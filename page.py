@@ -6,7 +6,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 # Настройки страницы
-st.set_page_config(page_title="ChatGPT Clone", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="Сборщик компьютеров", layout="wide")
 
 # Стилизация
 st.markdown("""
@@ -17,7 +17,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Заголовок
-st.title("🤖 ChatGPT Clone")
+st.title("Сборщик компьютеров")
 
 # Вывод истории сообщений
 st.write("### Чат")
