@@ -26,6 +26,12 @@ if st.sidebar.button("➕ Новый чат"):
     st.session_state.current_chat = new_chat_name
     st.rerun()
 
+if col2.button("🗑 Удалить чат"):
+    if selected_chat in st.session_state.chats and selected_chat != "Новый чат":
+        del st.session_state.chats[selected_chat]
+        st.session_state.current_chat = "Новый чат"
+        st.rerun()
+
 st.session_state.current_chat = selected_chat
 
 # Заголовок
