@@ -42,4 +42,4 @@ if st.button("Отправить"):
         st.session_state.messages.append({"role": "assistant", "text": response})
         
         # Обновляем страницу
-        st.experimental_rerun()
+        st.rerun()
