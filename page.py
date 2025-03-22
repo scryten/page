@@ -29,9 +29,12 @@ if col1.button("➕ Новый чат"):
     st.rerun()
 
 if col2.button("🗑 Удалить чат"):
-    if selected_chat in st.session_state.chats and selected_chat != "Новый чат":
+    if col2.button("🗑 Удалить чат"):
+    if selected_chat in st.session_state.chats:
         del st.session_state.chats[selected_chat]
-        st.session_state.current_chat = "Новый чат"
+        if not st.session_state.chats:
+            st.session_state.chats["Новый чат"] = []
+        st.session_state.current_chat = list(st.session_state.chats.keys())[0]
         st.rerun()
 
 st.session_state.current_chat = selected_chat
