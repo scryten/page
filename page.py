@@ -11,8 +11,7 @@ st.set_page_config(page_title="Компьютенатор", layout="wide")
 # Стилизация
 st.markdown("""
     <style>
-        .css-1aumxhk {display: none} /* Убирает кнопку "Made with Streamlit" */
-        .stTextArea textarea {height: 150px !important;} /* Увеличивает поле ввода */
+        .css-1aumxhk {display: none} /* Убирает кнопку "Made with Streamlit"
     </style>
 """, unsafe_allow_html=True)
 
