@@ -55,11 +55,10 @@ user_input = st.text_area("Введите сообщение:", key="user_input"
 if prompt := st.chat_input("I'm your virtual bartender, how may I help you?"):
     # Добавляем сообщение пользователя в историю текущего чата
     chat_history.append({"role": "user", "text": prompt})
-
+    
+    # Отображаем ответ заглушку (без ИИ)
+    response = "Простите, но ИИ отключен 🤖"
+    chat_history.append({"role": "assistant", "text": response})
         
-        # Отображаем ответ заглушку (без ИИ)
-        response = "Простите, но ИИ отключен 🤖"
-        chat_history.append({"role": "assistant", "text": response})
-        
-        # Обновляем страницу
-        st.rerun()
+    # Обновляем страницу
+    st.rerun()
