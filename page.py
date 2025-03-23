@@ -48,9 +48,6 @@ for message in chat_history:
     with st.chat_message(message["role"]):
         st.markdown(message["text"])
 
-# Поле ввода
-user_input = st.text_area("Введите сообщение:", key="user_input")
-
 if prompt := st.chat_input("I'm your virtual bartender, how may I help you?"):
     # Добавляем сообщение пользователя в историю текущего чата
     chat_history.append({"role": "user", "text": prompt})
