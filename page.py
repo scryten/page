@@ -22,9 +22,9 @@ st.markdown("""
 if st.session_state.sidebar_expanded:
     with st.sidebar:
         st.title("📂 История чатов")
-        if st.button("🔽 Свернуть / Развернуть панель"):
-            st.session_state.sidebar_expanded = False
-            st.rerun()
+        #if st.button("🔽 Свернуть / Развернуть панель"):
+        #    st.session_state.sidebar_expanded = False
+        #    st.rerun()
         selected_chat = st.radio("Выберите чат", list(st.session_state.chats.keys()))
 
         col1, col2 = st.columns([2, 1])
@@ -40,10 +40,10 @@ if st.session_state.sidebar_expanded:
                     st.session_state.chats["Новый чат"] = []
                 st.session_state.current_chat = list(st.session_state.chats.keys())[0]
                 st.rerun()
-else:
-    if st.button("🔼 Развернуть боковую панель"):
-        st.session_state.sidebar_expanded = True
-        st.rerun()
+#else:
+#    if st.button("🔼 Развернуть боковую панель"):
+#        st.session_state.sidebar_expanded = True
+#        st.rerun()
         
 st.session_state.current_chat = selected_chat if st.session_state.sidebar_expanded else st.session_state.current_chat
 
