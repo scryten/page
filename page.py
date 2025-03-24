@@ -2,6 +2,7 @@ import streamlit as st
 import speech_recognition as sr
 from gtts import gTTS
 import os
+import pyaudio
 
 # Инициализация session_state
 if "chats" not in st.session_state:
