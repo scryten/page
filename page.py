@@ -56,7 +56,7 @@ if st.session_state.sidebar_expanded:
         #    st.rerun()
         selected_chat = st.radio("Выберите чат", list(st.session_state.chats.keys()))
 
-        col1, col2 = st.columns([2, 1])
+        col1, col2, col3 = st.columns([2, 1, 1])
         if col1.button("➕ Новый чат"):
             new_chat_name = f"Чат {len(st.session_state.chats)}"
             st.session_state.chats[new_chat_name] = []
