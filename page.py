@@ -25,6 +25,8 @@ def recognize_speech():
         audio = recognizer.listen(source)
     try:
         text = recognizer.recognize_google(audio, language="ru-RU")
+        with open("voice_input.txt", "w", encoding="utf-8") as file:
+            file.write(text)
         return text
     except sr.UnknownValueError:
         return "Не удалось распознать речь"
