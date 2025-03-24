@@ -115,8 +115,8 @@ if prompt := st.chat_input("Behold, Perry the Platopus! I'm Computenator"):
     chat_history.append({"role": "assistant", "text": response})
 
     # Озвучивание ответа
-        audio_file = text_to_speech(response)
-        st.audio(audio_file, format="audio/mp3")
+    audio_file = text_to_speech(response)
+    st.audio(audio_file, format="audio/mp3")
 
     # Обновляем страницу
     st.rerun()
