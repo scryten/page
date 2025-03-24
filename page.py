@@ -120,3 +120,8 @@ if prompt := st.chat_input("Behold, Perry the Platopus! I'm Computenator"):
 
     # Обновляем страницу
     st.rerun()
+
+# Ссылка для скачивания голосового ввода
+if os.path.exists("voice_input.txt"):
+    with open("voice_input.txt", "r", encoding="utf-8") as file:
+        st.download_button("⬇ Скачать голосовой ввод", file, file_name="voice_input.txt")
